@@ -1,15 +1,12 @@
-let text = 'Hello';
-text = text + 'Sigma!';
-console.log(text);
-let name = 'Too personal';
-let age = 'Not telling';
-let sexuality = 'none of your business';
-text = ' Your name is ' + name + ' and your are ' + age + ' years old and your sexuality is ' + sexuality + '!';
-console.log(text);
-text = `Your name is ${name}
- and you are ${age} years old
-  and your sexuality is ${sexuality}!`;
-console.log(text);
+let array = [1, 2, 3, 'asd', true, [1, 2, 3]];
+console.log(array[2]);
+console.log(array[5][1]);
+array[3] = 'Hello';
+console.log(array);
+console.log(array.length);
 
-text = text.toUpperCase();
+array.push('new value');
+console.log(array);
+
+let text = array.join('UwU');
 console.log(text);
