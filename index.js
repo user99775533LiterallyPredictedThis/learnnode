@@ -1,12 +1,21 @@
-let array = [1, 2, 3, 'asd', true, [1, 2, 3]];
-console.log(array[2]);
-console.log(array[5][1]);
-array[3] = 'Hello';
-console.log(array);
-console.log(array.length);
+let obj = {
+    name: 'Sigma',
+    age: 67,
+    cat: {
+        name: 'Busya',
+        age: '4 months idk',
+        gender: 'female'
+    },
+    fruits: ['apple', 'banana', 'orange']
+};
 
-array.push('new value');
-console.log(array);
+// parent-name: 'asd', Not allowed because -, unless ' ' is used
+// 2asd: 'asd', Not allowed to start with number, unless ' ' is used
+// Neither recommended, but if you will: console.log(obj['parent-name']);
+// Just don't
 
-let text = array.join('UwU');
-console.log(text);
+//console.log(obj)
+//console.log(obj.cat)
+//console.log(obj.fruits)
+//console.log(obj.fruits[2])
+//console.log(Object.keys(obj));
