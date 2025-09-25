@@ -50,3 +50,14 @@ switch (day) {
     default:
         console.log("Imelikpäev");
 }
+
+let days = ['Pühapäev', 'Esmaspäev', 'Teisipäev', 'Kolmapäev', 'Neljapäev', 'Pidupäev', 'Pidupäev'];
+console.log(days[day]);
+
+num = 1;
+answer = num > 10 ? 'Suurem' : 'Väiksem';
+console.log(answer);
+
+let value = 'asdasd'; // If value left empty = 'Midagi muud'
+answer = value ?? 'Midagi muud'; // Null-coalescing operator
+console.log(answer);
