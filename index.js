@@ -1,66 +1,42 @@
-function hello() {
-    console.log('Hello World!');
-}
+let bool = true; // Self explanatory
+//console.log(bool);
+bool = false;
+//console.log(bool);
 
-hello();
-hello();
-hello();
-hello();
-hello();
+bool = true && true; // AND, only true if both statements = true
+bool = true && false; // AND, otherwise false
+bool = false && true; // AND, false
+bool = false && false; // AND, false
+//console.log(bool);
 
-function helloName(name) {
-    console.log(`Hello ${name}!`);
-}
+bool = true || false; // (AND/)OR, will = true if true is present on either side
+bool = false || false; // (AND/)OR, Only false if both sides = false
+//console.log(bool);
 
-helloName('Kaspar');
-helloName('Martin');
+bool = !true; //NOT, if not true then is false
+//console.log(bool);
+bool = !false; // NOT, if not false then is true
+//console.log(bool);
 
-function hi(name='Stupid', age='Insert the argument') {
-    console.log(`Hi ${name} you are ${age} years old`)
-}
+bool = (true && false || true) && !(false || true && false);
+// Answer: bool = true;
+//console.log(bool);
 
-hi('Sigma', 67);
-hi();
-
-let sum = function (a, b){
-    return a+b;
-}
-
-let answer = sum(4, 5);
-console.log(answer);
-console.log(sum(6, 10));
-sum(5, 6);
-
-let sub = (a, b) => {
-    return a-b;
-}
-
-console.log(sub(6, 10));
-
-let mult = (a, b) => a*b;
-
-console.log(mult(6, 10));
-
-let root = a => a*a;
-
-console.log(root(6, 10));
-
-let cool = () => console.log('cool');
-
-cool();
-
-let awesome = {
-    party: function () {
-        console.log('PARTY!');
-    },
-    cool: () => console.log('cool'),
-    nice() {
-        console.log('nice!');
-    }
-};
-
-// ^ Basically different ways to do the same thing or something idk....
-
-awesome.party();
-awesome.cool();
-awesome.nice(); 
+bool = 10 > 5; // True
+//console.log(bool);
+bool = 10 < 5; // False
+//console.log(bool);
+bool = 10 > 10; // False
+//console.log(bool);
+bool = 10 == 10; // True
+//console.log(bool);
+bool = '10' == 10; // True, non strict will convert and check
+//console.log(bool);
+bool = '10' === 10; // False, strict will check if types match before values
+//console.log(bool);
+bool = 10 >= 10; // True, greater or equals
+//console.log(bool);
+bool = '10' != 10; // False, not equals
+//console.log(bool);
+bool = '10' !== 10; // True
+//console.log(bool);
