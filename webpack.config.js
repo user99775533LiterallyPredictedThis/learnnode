@@ -15,13 +15,29 @@ export default {
         port: 9000,
     },
     module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
-  },
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+            {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                quietDeps: true
+                            }
+                        }
+                    }
+                ],
+            },
+        ],
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html'
