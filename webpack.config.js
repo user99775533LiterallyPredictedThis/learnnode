@@ -49,7 +49,11 @@ export default {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/views/index.njk'
+            template: './src/views/index.njk',
+            templateParameters: {
+                name: 'Sigma',
+                fruits: ['apple', 'cherry', 'mango', 'pineapple'],
+            }
         }),
                 new HtmlWebpackPlugin({
                     filename: 'about.html',
