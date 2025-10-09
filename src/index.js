@@ -1,16 +1,8 @@
 import './style.scss';
 
-let input = document.querySelector('input#new-item');
-let button = document.querySelector('#add-btn');
-let list = document.querySelector('#shopping-list');
-button.addEventListener('click', () => {
-    let newItem = input.value;
-    console.log(newItem);
-    list.innerHTML += `<li>(${newItem})</li>`;
-    input.value = '';
-});
+import { createApp } from 'vue';
 
-let title = document.querySelector('#title');
-input.addEventListener('change', () => {
-    title.innerHTML = input.value;
-});
+import App from './App.vue';
+
+let app = createApp(App);
+app.mount('#app');
