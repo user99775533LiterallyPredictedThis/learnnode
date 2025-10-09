@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npx webpack --mode development",
     "build": "npx webpack --mode production",
-    "serve": "npx webpack serve --mode development"
+    "serve": "npx webpack serve --mode development",
+    "deploy": "npm run build && surge ./dist user420literallypredictedthis.surge.sh"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/user99775533LiterallyPredictedThis/learnnode#readme",
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "surge": "^0.24.6",
     "webpack": "^5.101.3"
   },
   "devDependencies": {
