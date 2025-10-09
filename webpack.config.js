@@ -1,16 +1,20 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-let pages =[];
-for(let i= 1; i<10; i++){
+let response = await fetch('https://rickandmortyapi.com/api/character');
+let data = await response.json();
+console.log(data);
+
+let pages = [];
+for (let character of data.results) {
     let page = new HtmlWebpackPlugin({
-            filename: `page${i}.html`,
-            template: './src/views/page.njk',
-            templateParameters: {
-                page: i
-            }
-        });
-        pages.push(page);
+        filename: `${character.id}.html`,
+        template: './src/views/page.njk',
+        templateParameters: {
+            character, // same as character: character
+        }
+    });
+    pages.push(page);
 }
 
 export default {
@@ -63,8 +67,7 @@ export default {
         new HtmlWebpackPlugin({
             template: './src/views/index.njk',
             templateParameters: {
-                name: 'Sigma',
-                fruits: ['apple', 'cherry', 'mango', 'pineapple'],
+                characters: data.results
             }
         }),
         new HtmlWebpackPlugin({
