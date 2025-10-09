@@ -1,6 +1,18 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
+let pages =[];
+for(let i= 1; i<10; i++){
+    let page = new HtmlWebpackPlugin({
+            filename: `page${i}.html`,
+            template: './src/views/page.njk',
+            templateParameters: {
+                page: i
+            }
+        });
+        pages.push(page);
+}
+
 export default {
     entry: './src/index.js',
     output: {
@@ -26,7 +38,7 @@ export default {
                     "style-loader",
                     "css-loader",
                     "sass-loader",
-            {
+                    {
                         loader: 'sass-loader',
                         options: {
                             sassOptions: {
@@ -36,7 +48,7 @@ export default {
                     }
                 ],
             },
-             {
+            {
                 test: /\.njk$/,
                 use: [
                     {
@@ -55,13 +67,14 @@ export default {
                 fruits: ['apple', 'cherry', 'mango', 'pineapple'],
             }
         }),
-                new HtmlWebpackPlugin({
-                    filename: 'about.html',
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
             template: './src/views/about.njk'
         }),
-                new HtmlWebpackPlugin({
-                    filename: 'contacts.html',
+        new HtmlWebpackPlugin({
+            filename: 'contacts.html',
             template: './src/views/contacts.njk'
-        })
+        }),
+        ...pages
     ],
 };
