@@ -1,7 +1,8 @@
 <script setup>
+import RouterTabs from './components/RouterTabs.vue';
+
 </script>
 <template>
-  <RouterLink class="button is-primary mx-3 my-5" to="/">ToDo</RouterLink>
-  <RouterLink class="button is-primary mx-3 my-5"  to="/modals">Modals</RouterLink>
-  <RouterView></RouterView>
+<RouterTabs></RouterTabs>
+<RouterView></RouterView>
 </template>
