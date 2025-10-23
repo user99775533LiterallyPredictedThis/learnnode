@@ -9,7 +9,7 @@ let modal3Active = ref(false);
 </script>
 
 <template>
-    <div class="container mt-3">
+
         <button class="button is-primary mx-2" @click="modalActive = true">
             Click here
         </button>
@@ -19,7 +19,7 @@ let modal3Active = ref(false);
         <button class="button is-danger mx-2" @click="modal3Active = true">
             Click here as well
         </button>
-    </div>
+
 
     <ImgModal :active="modalActive" @close="modalActive = false" url="https://placekittens.com/500/500?r=1"></ImgModal>
     <ImgModal :active="modal2Active" @close="modal2Active = false" url="https://placekittens.com/500/500?r=2">

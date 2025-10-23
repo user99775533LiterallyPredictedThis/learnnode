@@ -26,8 +26,6 @@ return items.value.filter(item => !item.isDone);
 
 </script>
 <template>
-  <div class="container">
-    <div class="content">
       <div class="field has-addons">
         <div class="control is-expanded">
           <input
@@ -55,6 +53,4 @@ return items.value.filter(item => !item.isDone);
         placeholder="Enter Error code"
       />
       <img :src="'https://http.cat/' + code" />
-    </div>
-  </div>
 </template>
