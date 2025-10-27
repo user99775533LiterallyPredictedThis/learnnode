@@ -1,13 +1,18 @@
 <script setup>
-import RouterTabs from './components/RouterTabs.vue';
-
+import RouterTabs from "./components/RouterTabs.vue";
 </script>
-<template>
-<RouterTabs></RouterTabs>
 
-<div class="container mt-3 content">
-<Suspense>
-    <RouterView></RouterView>
-</Suspense>
-</div>
+<template>
+  <RouterTabs></RouterTabs>
+  <div v-if="$route.meta.noContainer === true" class="content">
+    <Suspense>
+      <RouterView></RouterView>
+    </Suspense>
+  </div>
+  
+  <div v-else class="container mt-3 content">
+    <Suspense>
+      <RouterView></RouterView>
+    </Suspense>
+  </div>
 </template>
