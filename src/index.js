@@ -10,6 +10,7 @@ import ChuckNorris from './pages/ChuckNorris.vue';
 import RickAndMorty from './pages/RickAndMorty.vue';
 import CatClicker from './pages/CatClicker.vue';
 import CanvasExample from './pages/CanvasExample.vue';
+import LeafletMap from './pages/LeafletMap.vue';
 
 
 
@@ -20,7 +21,7 @@ const routes = [
   { path: '/rickandmorty', component: RickAndMorty, name: 'Rick and Morty' },
   { path: '/catclicker', component: CatClicker, name: 'Cat Clicker', meta: {noContainer: true}},
   { path: '/canvas', component: CanvasExample, name: 'Canvas', meta: {noContainer: true}},
-
+  { path: '/leaflet', component: LeafletMap, name: 'Leaflet', meta: {noContainer: true}},
 ];
 
 export const router = createRouter({
