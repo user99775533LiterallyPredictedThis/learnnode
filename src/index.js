@@ -11,6 +11,8 @@ import RickAndMorty from './pages/RickAndMorty.vue';
 import CatClicker from './pages/CatClicker.vue';
 import CanvasExample from './pages/CanvasExample.vue';
 import LeafletMap from './pages/LeafletMap.vue';
+import WebApi from './pages/WebApi.vue';
+
 
 
 
@@ -22,6 +24,8 @@ const routes = [
   { path: '/catclicker', component: CatClicker, name: 'Cat Clicker', meta: {noContainer: true}},
   { path: '/canvas', component: CanvasExample, name: 'Canvas', meta: {noContainer: true}},
   { path: '/leaflet', component: LeafletMap, name: 'Leaflet', meta: {noContainer: true}},
+  { path: '/webapis', component: WebApi, name: 'WebAPIs'},
+
 ];
 
 export const router = createRouter({
