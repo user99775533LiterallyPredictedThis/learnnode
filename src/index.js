@@ -12,6 +12,8 @@ import CatClicker from './pages/CatClicker.vue';
 import CanvasExample from './pages/CanvasExample.vue';
 import LeafletMap from './pages/LeafletMap.vue';
 import WebApi from './pages/WebApi.vue';
+import Chat from './pages/Chat.vue';
+
 
 
 
@@ -25,7 +27,7 @@ const routes = [
   { path: '/canvas', component: CanvasExample, name: 'Canvas', meta: {noContainer: true}},
   { path: '/leaflet', component: LeafletMap, name: 'Leaflet', meta: {noContainer: true}},
   { path: '/webapis', component: WebApi, name: 'WebAPIs'},
-
+  { path: '/chat', component: Chat, name: 'Chat'},
 ];
 
 export const router = createRouter({
