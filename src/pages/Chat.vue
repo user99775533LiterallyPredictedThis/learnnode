@@ -78,7 +78,6 @@ function send() {
       </div>
     </div>
   </div>
-
   <div v-else class="field has-addons">
     <div class="control is-expanded">
       <input
