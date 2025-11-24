@@ -2,11 +2,13 @@ function write(text) {
     process.stdout.write(text);
 }
 
-import chalk from "chalk";
+write('Hello World!');
+setTimeout(() =>{
+write('\x1b[6D');
+write('MM24!');
+}, 5000);
 
-write(chalk.yellow.bgRed.underline('DANGER!!!'));
-write(chalk.bgRgb(255,0,0)('COLOR'));
-write('\n');
+
 
 
 
